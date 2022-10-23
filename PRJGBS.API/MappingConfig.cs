@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using PRJGBS.Models;
+using PRJGBS.Models.Dto;
 
 namespace PRJGBS.API
 {
@@ -6,7 +8,8 @@ namespace PRJGBS.API
     {
         public MappingConfig()
         {
-
+            CreateMap<Player, PlayerDTO>().ReverseMap();
+            CreateMap<Player, PlayerCreateDTO>().ReverseMap();
         }
     }
 }
